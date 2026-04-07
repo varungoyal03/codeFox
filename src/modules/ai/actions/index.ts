@@ -5,6 +5,7 @@ import prisma from "@/lib/db";
 import { getGithubAccessToken, getPullRequestDiff } from "@/modules/auth/github/lib/github";
 import { success } from "better-auth";
 import { ca } from "date-fns/locale";
+import { canCreateReview, incrementReviewCount } from "@/modules/payment/lib/subscription";
 
 export async function reviewPullRequest(owner: string, repo: string, prNumber: number) {
 
@@ -31,6 +32,17 @@ export async function reviewPullRequest(owner: string, repo: string, prNumber: n
         throw new Error(`Repository ${owner}/${repo} not found in the database. Please reconnect the repository.`);
     }
 
+    const canReview = await canCreateReview(
+			repository.user.id,
+			repository.id
+		);
+
+		if (!canReview) {
+			throw new Error(
+				"Review limit reached for this repository. Please upgrade to PRO for unlimited reviews."
+			);
+		}
+
     const githubAccount = repository.user.accounts[0];
 
     if(!githubAccount.accessToken) {
@@ -49,6 +61,8 @@ export async function reviewPullRequest(owner: string, repo: string, prNumber: n
             userId: repository.user.id
         }
     })
+
+    await incrementReviewCount(repository.user.id, repository.id);
 
     return {success:true, message: "Review queued"};
         }

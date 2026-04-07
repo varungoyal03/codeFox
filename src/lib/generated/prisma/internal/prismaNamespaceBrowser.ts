@@ -54,6 +54,7 @@ export const ModelName = {
   User: 'User',
   Repository: 'Repository',
   Review: 'Review',
+  UserUsage: 'UserUsage',
   Session: 'Session',
   Account: 'Account',
   Verification: 'Verification'
@@ -82,7 +83,11 @@ export const UserScalarFieldEnum = {
   emailVerified: 'emailVerified',
   image: 'image',
   createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  updatedAt: 'updatedAt',
+  subscriptionTier: 'subscriptionTier',
+  subscriptionStatus: 'subscriptionStatus',
+  polarCustomerId: 'polarCustomerId',
+  polarSubscriptionId: 'polarSubscriptionId'
 } as const
 
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -116,6 +121,18 @@ export const ReviewScalarFieldEnum = {
 } as const
 
 export type ReviewScalarFieldEnum = (typeof ReviewScalarFieldEnum)[keyof typeof ReviewScalarFieldEnum]
+
+
+export const UserUsageScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  repositoryCount: 'repositoryCount',
+  reviewCounts: 'reviewCounts',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type UserUsageScalarFieldEnum = (typeof UserUsageScalarFieldEnum)[keyof typeof UserUsageScalarFieldEnum]
 
 
 export const SessionScalarFieldEnum = {
@@ -171,6 +188,13 @@ export const SortOrder = {
 export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
 
 
+export const JsonNullValueInput = {
+  JsonNull: JsonNull
+} as const
+
+export type JsonNullValueInput = (typeof JsonNullValueInput)[keyof typeof JsonNullValueInput]
+
+
 export const QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
@@ -185,4 +209,13 @@ export const NullsOrder = {
 } as const
 
 export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
+
+
+export const JsonNullValueFilter = {
+  DbNull: DbNull,
+  JsonNull: JsonNull,
+  AnyNull: AnyNull
+} as const
+
+export type JsonNullValueFilter = (typeof JsonNullValueFilter)[keyof typeof JsonNullValueFilter]
 
