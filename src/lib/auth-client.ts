@@ -7,7 +7,7 @@ if (!baseURL) {
 	throw new Error("BETTER_AUTH_URL environment variable is not defined");
 }
 
-export const { signIn, signUp, useSession, signOut } = createAuthClient({
+export const { signIn, signUp, useSession, signOut, customer, checkout } = createAuthClient({
 	baseURL,
 	plugins: [polarClient()],
 }); 

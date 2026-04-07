@@ -32,6 +32,10 @@ export const auth = betterAuth({
 			scope: ["repo"], // optional
 		},
 	},
+	trustedOrigins: [
+		"http://localhost:3000",
+		"https://cercelae-salma-hidebound.ngrok-free.dev",
+	],
 
 		plugins: [
 		polar({
