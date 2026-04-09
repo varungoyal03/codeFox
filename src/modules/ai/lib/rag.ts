@@ -6,19 +6,33 @@ import { google } from "@ai-sdk/google";
 const MAX_TOKEN_CHARS = 8000; // Gemini-embedding-001 limit is ~8k tokens
 const PINECONE_BATCH_SIZE = 100;
 const MAX_RETRIES = 3;
+const EMBEDDING_DELAY_MS = 200; // 200ms delay between embedding calls to stay within 30k TPM
+
+// Rate limiting: ensure we stay within 30k TPM
+async function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 /**
  * 1. ENHANCED EMBEDDING GENERATOR
- * Handles cleaning, validation, and silent failure.
+ * Handles cleaning, validation, silent failure, and rate limiting for 30k TPM.
  */
 export async function generateEmbedding(text: string): Promise<number[] | null> {
   if (!text || typeof text !== "string" || text.trim().length === 0) return null;
 
-
   const sanitizedText = text.replace(/\s+/g, " ").trim();
+  
+  // Console message before slicing at token limit
+  if (sanitizedText.length > MAX_TOKEN_CHARS) {
+    console.warn(`⚠️ TEXT TRUNCATION: Document length ${sanitizedText.length} chars exceeds limit ${MAX_TOKEN_CHARS}. Slicing to fit within token limit...`);
+  }
+  
   const truncatedText = sanitizedText.slice(0, 8000);
 
   try {
+    // Add delay to stay within 30k TPM limit
+    await sleep(EMBEDDING_DELAY_MS);
+
     const result = await embed({
       model: google.embedding("gemini-embedding-001"),
       value: truncatedText,
@@ -40,6 +54,7 @@ export async function generateEmbedding(text: string): Promise<number[] | null> 
 /**
  * 2. COMPREHENSIVE CODEBASE INDEXER
  * Uses Batching and robust error boundaries.
+ * Processes sequentially with delays to stay within 30k TPM.
  */
 export async function indexCodebase(
   repoId: string,
@@ -49,13 +64,14 @@ export async function indexCodebase(
   
   const vectors: any[] = [];
 
-  // Process files sequentially to avoid hitting LLM rate limits too hard
-  for (const file of files) {
+  // Process files sequentially with delay to avoid hitting rate limit
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
     try {
       // Create a context-rich string for the LLM
       const documentBody = `File Path: ${file.path}\nContent: ${file.content}`;
       
-      const embedding = await generateEmbedding(documentBody);
+      const embedding = await generateEmbedding(documentBody); // Already has EMBEDDING_DELAY_MS built-in
 
       if (embedding) {
         vectors.push({
@@ -70,6 +86,11 @@ export async function indexCodebase(
             updatedAt: new Date().toISOString(),
           },
         });
+      }
+
+      // Log progress every 10 files
+      if ((i + 1) % 10 === 0) {
+        console.log(`📊 Processed ${i + 1}/${files.length} files...`);
       }
     } catch (error) {
       console.error(`❌ Critical failure on file ${file.path}:`, error);

@@ -45,8 +45,8 @@ export const auth = betterAuth({
 				checkout({
 					products: [
 						{
-							productId: "9e306d45-3b7b-47e4-925c-b223238711b9",
-							slug: "codefox-sigmadev" // Custom slug for easy reference in Checkout URL, e.g. /checkout/codefox-sigmadev
+							productId: "ded16d2d-9e2b-496b-adbe-bc81649a9937",
+							slug: "codefox-alphaprod" // Custom slug for easy reference in Checkout URL, e.g. /checkout/codefox-sigmadev
 						},
 					],
 					successUrl:

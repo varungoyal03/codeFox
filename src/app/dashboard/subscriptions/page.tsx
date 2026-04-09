@@ -166,7 +166,7 @@ export default function SubscriptionPageClient() {
 			setCheckoutLoading(true);
 
 			await checkout({
-				slug: "codefox-sigmadev" ,
+				slug: "codefox-alphaprod" ,
 			});
 		} catch (error) {
 			console.error("Failed to initialize checkout:", error);
