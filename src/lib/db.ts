@@ -8,12 +8,17 @@
  * during hot-reloads.
  */
 
-import { PrismaClient } from "./generated/prisma/client";
+import { Pool } from "pg";
 import { PrismaPg } from "@prisma/adapter-pg";
+import { PrismaClient } from "./generated/prisma/client";
 
-const adapter = new PrismaPg({
+// Initialize a proper connection pool
+const pool = new Pool({
 	connectionString: process.env.DATABASE_URL,
+	max: 5, // Restrict max connections per serverless instance
 });
+
+const adapter = new PrismaPg(pool);
 
 const prismaClientSingleton = () => {
 	return new PrismaClient({

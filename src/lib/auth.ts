@@ -34,7 +34,7 @@ export const auth = betterAuth({
 	},
 	trustedOrigins: [
 		"http://localhost:3000",
-		"https://cercelae-salma-hidebound.ngrok-free.dev",
+		process.env.NEXT_PUBLIC_APP_BASE_URL!,
 	],
 
 		plugins: [
