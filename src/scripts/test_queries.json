@@ -1,0 +1,66 @@
+[
+    {
+        "query": "Algorithm for merging overlapping intervals in an array",
+        "repoId": "Vanshgargji/DSA-Problems",
+        "relevantFiles": [
+            "0056-merge-intervals/0056-merge-intervals.cpp",
+            "0056-merge-intervals/README.md"
+        ]
+    },
+    {
+        "query": "How to insert a new interval into a sorted list of non-overlapping intervals?",
+        "repoId": "Vanshgargji/DSA-Problems",
+        "relevantFiles": [
+            "0057-insert-interval/0057-insert-interval.cpp",
+            "0057-insert-interval/README.md"
+        ]
+    },
+    {
+        "query": "Implementation of String to Integer (atoi) with overflow handling",
+        "repoId": "Vanshgargji/DSA-Problems",
+        "relevantFiles": [
+            "8-string-to-integer-atoi/string-to-integer-atoi.cpp",
+            "8-string-to-integer-atoi/README.md"
+        ]
+    },
+    {
+        "query": "Optimal solution for checking if two strings represent an isomorphic mapping",
+        "repoId": "Vanshgargji/DSA-Problems",
+        "relevantFiles": [
+            "0205-isomorphic-strings/0205-isomorphic-strings.cpp",
+            "0205-isomorphic-strings/README.md"
+        ]
+    },
+    {
+        "query": "Finding the longest common prefix string amongst an array of strings",
+        "repoId": "Vanshgargji/DSA-Problems",
+        "relevantFiles": [
+            "0014-longest-common-prefix/0014-longest-common-prefix.cpp",
+            "0014-longest-common-prefix/README.md"
+        ]
+    },
+    {
+        "query": "How to remove the outermost parentheses of every primitive decomposition?",
+        "repoId": "Vanshgargji/DSA-Problems",
+        "relevantFiles": [
+            "1021-remove-outermost-parentheses/optimal solution.cpp",
+            "1021-remove-outermost-parentheses/1021-remove-outermost-parentheses.cpp"
+        ]
+    },
+    {
+        "query": "Greedy approach to find the maximum possible value with a single digit swap",
+        "repoId": "Vanshgargji/DSA-Problems",
+        "relevantFiles": [
+            "0670-maximum-swap/0670-maximum-swap.cpp",
+            "0670-maximum-swap/README.md"
+        ]
+    },
+    {
+        "query": "Sort characters in a string by their frequency of occurrence",
+        "repoId": "Vanshgargji/DSA-Problems",
+        "relevantFiles": [
+            "451-sort-characters-by-frequency/sort-characters-by-frequency.cpp",
+            "451-sort-characters-by-frequency/other methods.cpp"
+        ]
+    }
+]

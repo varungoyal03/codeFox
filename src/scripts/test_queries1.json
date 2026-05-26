@@ -1,0 +1,60 @@
+[
+  {
+    "query": "GitHub webhook pull request event handler",
+    "repoId": "dravynx/CodeFox",
+    "relevantFiles": [
+      "src/app/api/webhooks/github/route.ts",
+      "src/inngest/functions/review.ts"
+    ]
+  },
+  {
+    "query": "Inngest event driven review pipeline steps",
+    "repoId": "dravynx/CodeFox",
+    "relevantFiles": [
+      "src/inngest/functions/review.ts",
+      "src/inngest/client.ts",
+      "src/inngest/functions/index.ts"
+    ]
+  },
+  {
+    "query": "Pinecone vector embedding upsert codebase indexing",
+    "repoId": "dravynx/CodeFox",
+    "relevantFiles": [
+      "src/modules/ai/lib/rag.ts",
+      "src/lib/pinecone.ts"
+    ]
+  },
+  {
+    "query": "retrieve context top-k similarity search RAG",
+    "repoId": "dravynx/CodeFox",
+    "relevantFiles": [
+      "src/modules/ai/lib/rag.ts"
+    ]
+  },
+  {
+    "query": "GitHub OAuth session token access authentication",
+    "repoId": "dravynx/CodeFox",
+    "relevantFiles": [
+      "src/lib/auth.ts",
+      "src/lib/auth-client.ts",
+      "src/modules/auth/utils/auth-utils.ts"
+    ]
+  },
+  {
+    "query": "Polar subscription webhook user tier upgrade",
+    "repoId": "dravynx/CodeFox",
+    "relevantFiles": [
+      "src/lib/auth.ts",
+      "src/modules/payment/lib/subscription.ts",
+      "src/modules/payment/config/polar.ts"
+    ]
+  },
+  {
+    "query": "user usage review count limit enforcement",
+    "repoId": "dravynx/CodeFox",
+    "relevantFiles": [
+      "src/modules/payment/lib/subscription.ts",
+      "src/modules/ai/actions/index.ts"
+    ]
+  }
+]

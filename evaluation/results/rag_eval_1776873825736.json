@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-22T16:03:45.735Z",
+    "index": "codefox-vector-embedding",
+    "topK": 7,
+    "queriesFile": "src/scripts/test_queries.json",
+    "totalQueries": 7
+  },
+  "aggregate": {
+    "precision": 0.30612244897959184,
+    "recall": 0.9523809523809524,
+    "hitRate": 1,
+    "avgQueryLatency": 2334.1428571428573,
+    "p95QueryLatency": 3538,
+    "avgEmbeddingLatency": 904.5714285714286
+  },
+  "detailed": [
+    {
+      "query": "GitHub webhook pull request event handler",
+      "precision": 0.2857142857142857,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 3538,
+      "embeddingLatencyMs": 1167,
+      "retrieved": [
+        "src/app/api/webhooks/github/route.ts",
+        "src/modules/auth/github/lib/github.ts",
+        "src/modules/ai/actions/index.ts",
+        "src/modules/repository/actions/index.ts",
+        "src/inngest/functions/review.ts",
+        "src/modules/settings/actions/index.ts",
+        "src/lib/auth.ts"
+      ],
+      "relevant": [
+        "src/app/api/webhooks/github/route.ts",
+        "src/inngest/functions/review.ts"
+      ]
+    },
+    {
+      "query": "Inngest event driven review pipeline steps",
+      "precision": 0.42857142857142855,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 1967,
+      "embeddingLatencyMs": 595,
+      "retrieved": [
+        "src/inngest/functions/review.ts",
+        "src/app/api/inngest/route.ts",
+        "src/inngest/client.ts",
+        "src/modules/ai/actions/index.ts",
+        "src/inngest/functions/index.ts",
+        "src/app/api/webhooks/github/route.ts",
+        "src/lib/generated/prisma/models/Review.ts"
+      ],
+      "relevant": [
+        "src/inngest/functions/review.ts",
+        "src/inngest/client.ts",
+        "src/inngest/functions/index.ts"
+      ]
+    },
+    {
+      "query": "Pinecone vector embedding upsert codebase indexing",
+      "precision": 0.2857142857142857,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 2270,
+      "embeddingLatencyMs": 904,
+      "retrieved": [
+        "src/modules/ai/lib/rag.ts",
+        "src/lib/pinecone.ts",
+        "src/inngest/functions/index.ts",
+        "src/app/api/inngest/route.ts",
+        "src/modules/repository/actions/index.ts",
+        "src/components/ai-elements/code-block.tsx",
+        "src/components/ai-elements/sources.tsx"
+      ],
+      "relevant": [
+        "src/modules/ai/lib/rag.ts",
+        "src/lib/pinecone.ts"
+      ]
+    },
+    {
+      "query": "retrieve context top-k similarity search RAG",
+      "precision": 0.14285714285714285,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 1862,
+      "embeddingLatencyMs": 943,
+      "retrieved": [
+        "src/modules/ai/lib/rag.ts",
+        "src/components/ai-elements/context.tsx",
+        "src/components/ai-elements/open-in-chat.tsx",
+        "src/inngest/functions/review.ts",
+        "src/lib/pinecone.ts",
+        "src/components/ai-elements/code-block.tsx",
+        "src/inngest/functions/index.ts"
+      ],
+      "relevant": [
+        "src/modules/ai/lib/rag.ts"
+      ]
+    },
+    {
+      "query": "GitHub OAuth session token access authentication",
+      "precision": 0.2857142857142857,
+      "recall": 0.6666666666666666,
+      "hit": 1,
+      "latencyMs": 1845,
+      "embeddingLatencyMs": 899,
+      "retrieved": [
+        "src/modules/auth/github/lib/github.ts",
+        "src/modules/auth/components/login-ui.tsx",
+        "src/lib/auth.ts",
+        "src/modules/repository/actions/index.ts",
+        "src/modules/auth/dashboard/actions/index.ts",
+        "src/lib/auth-client.ts",
+        "src/modules/review/actions/index.ts"
+      ],
+      "relevant": [
+        "src/lib/auth.ts",
+        "src/lib/auth-client.ts",
+        "src/modules/auth/utils/auth-utils.ts"
+      ]
+    },
+    {
+      "query": "Polar subscription webhook user tier upgrade",
+      "precision": 0.42857142857142855,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 1798,
+      "embeddingLatencyMs": 961,
+      "retrieved": [
+        "src/modules/payment/actions/index.tsx",
+        "src/modules/payment/lib/subscription.ts",
+        "prisma/migrations/20260406155648_added_polar_ids/migration.sql",
+        "prisma/migrations/20260406053117_user_usage_added/migration.sql",
+        "src/lib/auth.ts",
+        "src/lib/generated/prisma/models/User.ts",
+        "src/modules/payment/config/polar.ts"
+      ],
+      "relevant": [
+        "src/lib/auth.ts",
+        "src/modules/payment/lib/subscription.ts",
+        "src/modules/payment/config/polar.ts"
+      ]
+    },
+    {
+      "query": "user usage review count limit enforcement",
+      "precision": 0.2857142857142857,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 3059,
+      "embeddingLatencyMs": 863,
+      "retrieved": [
+        "src/modules/payment/lib/subscription.ts",
+        "prisma/migrations/20260406053117_user_usage_added/migration.sql",
+        "src/lib/generated/prisma/models/UserUsage.ts",
+        "prisma/schema.prisma",
+        "src/modules/ai/actions/index.ts",
+        "src/app/dashboard/subscriptions/page.tsx",
+        "src/lib/generated/prisma/models/Review.ts"
+      ],
+      "relevant": [
+        "src/modules/payment/lib/subscription.ts",
+        "src/modules/ai/actions/index.ts"
+      ]
+    }
+  ],
+  "summary": {
+    "resumeLine": "...enabling a RAG-based retrieval system with top-7 similarity search, achieving 31% precision@7 and 100% hit rate across 7 test queries, with p95 retrieval latency of 3538ms."
+  }
+}

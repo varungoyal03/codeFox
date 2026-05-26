@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-22T16:29:48.269Z",
+    "index": "codefox-vector-embedding",
+    "topK": 7,
+    "queriesFile": "src/scripts/test_queries.json",
+    "totalQueries": 5
+  },
+  "aggregate": {
+    "precision": 0.17142857142857143,
+    "recall": 0.5666666666666667,
+    "hitRate": 0.8,
+    "avgQueryLatency": 2502.2,
+    "p95QueryLatency": 3971,
+    "avgEmbeddingLatency": 980.4
+  },
+  "detailed": [
+    {
+      "query": "How is workflow validation implemented to prevent circular dependencies?",
+      "precision": 0.14285714285714285,
+      "recall": 0.5,
+      "hit": 1,
+      "latencyMs": 3971,
+      "embeddingLatencyMs": 852,
+      "retrieved": [
+        "src/utils/workflowValidation.ts",
+        "src/utils/__tests__/workflowValidation.simple.test.ts",
+        "src/types/workflow.types.ts",
+        "ARCHITECTURE.md",
+        "COMPONENT_DIAGRAM.md",
+        "README.md",
+        "PROJECT_SUMMARY.md"
+      ],
+      "relevant": [
+        "src/utils/workflowValidation.ts",
+        "src/hooks/useWorkflowState.ts"
+      ]
+    },
+    {
+      "query": "Where is the logic for simulating the HR onboarding workflow execution?",
+      "precision": 0,
+      "recall": 0,
+      "hit": 0,
+      "latencyMs": 1888,
+      "embeddingLatencyMs": 1153,
+      "retrieved": [
+        "src/api/workflowApi.ts",
+        "README.md",
+        "PROJECT_SUMMARY.md",
+        "ARCHITECTURE.md",
+        "USAGE_EXAMPLES.md",
+        "WORKFLOW_TEMPLATES_GUIDE.md",
+        "COMPONENT_DIAGRAM.md"
+      ],
+      "relevant": [
+        "src/components/panels/SimulationPanel.tsx",
+        "src/hooks/useAutomations.ts"
+      ]
+    },
+    {
+      "query": "How are custom nodes and handles defined for the React Flow canvas?",
+      "precision": 0.2857142857142857,
+      "recall": 0.6666666666666666,
+      "hit": 1,
+      "latencyMs": 2639,
+      "embeddingLatencyMs": 904,
+      "retrieved": [
+        "src/components/canvas/WorkflowCanvas.tsx",
+        "src/components/nodes/CustomNode.tsx",
+        "src/components/nodes/CustomNode.css",
+        "COMPONENT_DIAGRAM.md",
+        "src/hooks/useWorkflowState.ts",
+        "src/components/canvas/WorkflowCanvas.css",
+        "src/App.tsx"
+      ],
+      "relevant": [
+        "src/components/nodes/CustomNode.tsx",
+        "src/components/canvas/WorkflowCanvas.tsx",
+        "src/types/workflow.types.ts"
+      ]
+    },
+    {
+      "query": "What security measures are in place for workflow data sanitization?",
+      "precision": 0.14285714285714285,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 1761,
+      "embeddingLatencyMs": 1051,
+      "retrieved": [
+        "src/utils/security.ts",
+        "SECURITY.md",
+        "src/utils/workflowValidation.ts",
+        "PROJECT_SUMMARY.md",
+        "ARCHITECTURE.md",
+        "COMPONENT_DIAGRAM.md",
+        "README.md"
+      ],
+      "relevant": [
+        "src/utils/security.ts"
+      ]
+    },
+    {
+      "query": "How are workflow templates loaded from the mock API?",
+      "precision": 0.2857142857142857,
+      "recall": 0.6666666666666666,
+      "hit": 1,
+      "latencyMs": 2252,
+      "embeddingLatencyMs": 942,
+      "retrieved": [
+        "WORKFLOW_TEMPLATES_GUIDE.md",
+        "src/api/workflowApi.ts",
+        "src/api/__tests__/workflowApi.simple.test.ts",
+        "src/api/mockData.ts",
+        "src/types/api.types.ts",
+        "src/hooks/useAutomations.ts",
+        "COMPONENT_DIAGRAM.md"
+      ],
+      "relevant": [
+        "src/api/workflowApi.ts",
+        "src/data/workflowTemplates.ts",
+        "src/api/mockData.ts"
+      ]
+    }
+  ],
+  "summary": {
+    "resumeLine": "...enabling a RAG-based retrieval system with top-7 similarity search, achieving 17% precision@7 and 80% hit rate across 5 test queries, with p95 retrieval latency of 3971ms."
+  }
+}

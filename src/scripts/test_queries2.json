@@ -1,0 +1,43 @@
+[
+  {
+    "query": "How is workflow validation implemented to prevent circular dependencies?",
+    "repoId": "varungoyal03/HR-Workflow-Designer",
+    "relevantFiles": [
+      "src/utils/workflowValidation.ts",
+      "src/hooks/useWorkflowState.ts"
+    ]
+  },
+  {
+    "query": "Where is the logic for simulating the HR onboarding workflow execution?",
+    "repoId": "varungoyal03/HR-Workflow-Designer",
+    "relevantFiles": [
+      "src/components/panels/SimulationPanel.tsx",
+      "src/hooks/useAutomations.ts"
+    ]
+  },
+  {
+    "query": "How are custom nodes and handles defined for the React Flow canvas?",
+    "repoId": "varungoyal03/HR-Workflow-Designer",
+    "relevantFiles": [
+      "src/components/nodes/CustomNode.tsx",
+      "src/components/canvas/WorkflowCanvas.tsx",
+      "src/types/workflow.types.ts"
+    ]
+  },
+  {
+    "query": "What security measures are in place for workflow data sanitization?",
+    "repoId": "varungoyal03/HR-Workflow-Designer",
+    "relevantFiles": [
+      "src/utils/security.ts"
+    ]
+  },
+  {
+    "query": "How are workflow templates loaded from the mock API?",
+    "repoId": "varungoyal03/HR-Workflow-Designer",
+    "relevantFiles": [
+      "src/api/workflowApi.ts",
+      "src/data/workflowTemplates.ts",
+      "src/api/mockData.ts"
+    ]
+  }
+]

@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-22T16:37:28.455Z",
+    "index": "codefox-vector-embedding",
+    "topK": 7,
+    "queriesFile": "src/scripts/test_queries.json",
+    "totalQueries": 8
+  },
+  "aggregate": {
+    "precision": 0.28571428571428564,
+    "recall": 1,
+    "hitRate": 1,
+    "avgQueryLatency": 2132.125,
+    "p95QueryLatency": 3394,
+    "avgEmbeddingLatency": 898.125
+  },
+  "detailed": [
+    {
+      "query": "Algorithm for merging overlapping intervals in an array",
+      "precision": 0.2857142857142857,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 3394,
+      "embeddingLatencyMs": 713,
+      "retrieved": [
+        "0056-merge-intervals/README.md",
+        "0056-merge-intervals/0056-merge-intervals.cpp",
+        "0057-insert-interval/0057-insert-interval.cpp",
+        "0057-insert-interval/README.md",
+        "1021-remove-outermost-parentheses/README.md",
+        "README.md",
+        "3952-trionic-array-i/README.md"
+      ],
+      "relevant": [
+        "0056-merge-intervals/0056-merge-intervals.cpp",
+        "0056-merge-intervals/README.md"
+      ]
+    },
+    {
+      "query": "How to insert a new interval into a sorted list of non-overlapping intervals?",
+      "precision": 0.2857142857142857,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 2291,
+      "embeddingLatencyMs": 884,
+      "retrieved": [
+        "0057-insert-interval/README.md",
+        "0057-insert-interval/0057-insert-interval.cpp",
+        "0056-merge-intervals/README.md",
+        "0056-merge-intervals/0056-merge-intervals.cpp",
+        "1984-maximum-distance-between-a-pair-of-values/README.md",
+        "README.md",
+        "stats.json"
+      ],
+      "relevant": [
+        "0057-insert-interval/0057-insert-interval.cpp",
+        "0057-insert-interval/README.md"
+      ]
+    },
+    {
+      "query": "Implementation of String to Integer (atoi) with overflow handling",
+      "precision": 0.2857142857142857,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 1927,
+      "embeddingLatencyMs": 1026,
+      "retrieved": [
+        "8-string-to-integer-atoi/README.md",
+        "8-string-to-integer-atoi/string-to-integer-atoi.cpp",
+        "13-roman-to-integer/README.md",
+        "0670-maximum-swap/0670-maximum-swap.cpp",
+        "13-roman-to-integer/roman-to-integer.cpp",
+        "12-integer-to-roman/README.md",
+        "0670-maximum-swap/README.md"
+      ],
+      "relevant": [
+        "8-string-to-integer-atoi/string-to-integer-atoi.cpp",
+        "8-string-to-integer-atoi/README.md"
+      ]
+    },
+    {
+      "query": "Optimal solution for checking if two strings represent an isomorphic mapping",
+      "precision": 0.2857142857142857,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 1930,
+      "embeddingLatencyMs": 601,
+      "retrieved": [
+        "0205-isomorphic-strings/README.md",
+        "0205-isomorphic-strings/0205-isomorphic-strings.cpp",
+        "242-valid-anagram/Other Methods.cpp",
+        "242-valid-anagram/README.md",
+        "4139-minimum-absolute-distance-between-mirror-pairs/README.md",
+        "242-valid-anagram/valid-anagram.cpp",
+        "0796-rotate-string/README.md"
+      ],
+      "relevant": [
+        "0205-isomorphic-strings/0205-isomorphic-strings.cpp",
+        "0205-isomorphic-strings/README.md"
+      ]
+    },
+    {
+      "query": "Finding the longest common prefix string amongst an array of strings",
+      "precision": 0.2857142857142857,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 1814,
+      "embeddingLatencyMs": 1043,
+      "retrieved": [
+        "0014-longest-common-prefix/README.md",
+        "0014-longest-common-prefix/0014-longest-common-prefix.cpp",
+        "1903-largest-odd-number-in-string/optimal solution.cpp",
+        "1903-largest-odd-number-in-string/README.md",
+        "1903-largest-odd-number-in-string/1903-largest-odd-number-in-string.cpp",
+        "2199-two-furthest-houses-with-different-colors/README.md",
+        "README.md"
+      ],
+      "relevant": [
+        "0014-longest-common-prefix/0014-longest-common-prefix.cpp",
+        "0014-longest-common-prefix/README.md"
+      ]
+    },
+    {
+      "query": "How to remove the outermost parentheses of every primitive decomposition?",
+      "precision": 0.2857142857142857,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 2156,
+      "embeddingLatencyMs": 887,
+      "retrieved": [
+        "1021-remove-outermost-parentheses/README.md",
+        "1021-remove-outermost-parentheses/optimal solution.cpp",
+        "1021-remove-outermost-parentheses/1021-remove-outermost-parentheses.cpp",
+        "1737-maximum-nesting-depth-of-the-parentheses/README.md",
+        "2906-construct-product-matrix/README.md",
+        "stats.json",
+        "2906-construct-product-matrix/2906-construct-product-matrix.cpp"
+      ],
+      "relevant": [
+        "1021-remove-outermost-parentheses/optimal solution.cpp",
+        "1021-remove-outermost-parentheses/1021-remove-outermost-parentheses.cpp"
+      ]
+    },
+    {
+      "query": "Greedy approach to find the maximum possible value with a single digit swap",
+      "precision": 0.2857142857142857,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 1771,
+      "embeddingLatencyMs": 986,
+      "retrieved": [
+        "0670-maximum-swap/0670-maximum-swap.cpp",
+        "0670-maximum-swap/README.md",
+        "1903-largest-odd-number-in-string/README.md",
+        "1903-largest-odd-number-in-string/optimal solution.cpp",
+        "4168-mirror-distance-of-an-integer/README.md",
+        "1903-largest-odd-number-in-string/1903-largest-odd-number-in-string.cpp",
+        "13-roman-to-integer/roman-to-integer.cpp"
+      ],
+      "relevant": [
+        "0670-maximum-swap/0670-maximum-swap.cpp",
+        "0670-maximum-swap/README.md"
+      ]
+    },
+    {
+      "query": "Sort characters in a string by their frequency of occurrence",
+      "precision": 0.2857142857142857,
+      "recall": 1,
+      "hit": 1,
+      "latencyMs": 1774,
+      "embeddingLatencyMs": 1045,
+      "retrieved": [
+        "451-sort-characters-by-frequency/README.md",
+        "451-sort-characters-by-frequency/other methods.cpp",
+        "451-sort-characters-by-frequency/sort-characters-by-frequency.cpp",
+        "0670-maximum-swap/README.md",
+        "242-valid-anagram/README.md",
+        "0205-isomorphic-strings/README.md",
+        "0670-maximum-swap/0670-maximum-swap.cpp"
+      ],
+      "relevant": [
+        "451-sort-characters-by-frequency/sort-characters-by-frequency.cpp",
+        "451-sort-characters-by-frequency/other methods.cpp"
+      ]
+    }
+  ],
+  "summary": {
+    "resumeLine": "...enabling a RAG-based retrieval system with top-7 similarity search, achieving 29% precision@7 and 100% hit rate across 8 test queries, with p95 retrieval latency of 3394ms."
+  }
+}
